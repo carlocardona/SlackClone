@@ -1,10 +1,25 @@
-import React from 'react';
 import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Header from './components/Header/Header'
+
 
 function App() {
   return (
     <div className="app">
-      <h1>SlackCLone</h1>
+      <Router>
+            <>
+              <Switch>
+                <Route path="/" exact>
+                  <Header />
+                </Route>
+              </Switch>
+            </>
+      </Router>    
     </div>
   );
 }
